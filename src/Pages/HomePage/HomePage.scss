@@ -1,0 +1,27 @@
+@import "../../style.scss";
+
+.home {
+  @include themify($themes) {
+    grid-area: mainContent;
+    padding: 20px;
+ 
+    background-color: themed("bgSoft");
+    
+  }
+
+  .storiesView {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      scrollbar-width: thin;
+    }
+
+    @include tablet {
+      overflow-x: scroll;
+      width: 100%;
+    }
+    @include mobile {
+      overflow-x: scroll;
+      width: 100%;
+    }
+  }
+}

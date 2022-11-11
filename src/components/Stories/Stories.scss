@@ -1,0 +1,124 @@
+@import "../../style.scss";
+
+.stories {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+
+    width: 90vw;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 10px;
+
+    @include tablet {
+      height: 150px;
+      gap: 20px;
+      width: 100%;
+      padding: 0px 10px;
+    }
+    @include mobile {
+      height: 150px;
+      gap: 20px;
+      width: 100%;
+      padding: 0px 10px;
+    }
+
+    .story {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      width: 150px;
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: visible;
+        justify-content: center;
+        align-items: center;
+      }
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: visible;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+
+        @include tablet {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        @include mobile {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      span {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        font-weight: 500;
+        @include tablet {
+          position: relative;
+          color: themed("textColor");
+          letter-spacing: 0.01em;
+          max-width: 50px;
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          left:0
+        }
+        @include mobile {
+          position: relative;
+          color: themed("textColor");
+          letter-spacing: 0.01em;
+          max-width: 50px;
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          left:0
+        }
+      }
+
+      button {
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        color: white;
+        background-color: #5271ff;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobile {
+          bottom: 55%;
+          left: 20%;
+        }
+        @include tablet {
+          bottom: 55%;
+          left: 20%;
+        }
+      }
+    }
+   
+  }
+}

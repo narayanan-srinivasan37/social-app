@@ -1,0 +1,23 @@
+@import "../../style.scss";
+
+.layout {
+  @include themify($themes) {
+    display: grid;
+    grid-template-columns: 20vw 50vw 30vw;
+    grid-template-areas: "leftbar mainContent rightbar";
+    @include mobile {
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-areas: "mainContent";
+    }
+    @include tablet {
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-areas: "mainContent";
+    }
+    .outlet {
+      grid-area: mainContent;
+   
+    }
+  }
+}
